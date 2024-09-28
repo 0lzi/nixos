@@ -7,7 +7,6 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-# https://github.com/catppuccin/nix - set up before using this import
        <catppuccin/modules/nixos>
       ./hardware-configuration.nix
     ];
@@ -23,9 +22,9 @@
   # boot.loader.grub.useOSProber = true;
 
 # Networking
-  networking.hostName = "nixos-"; # Define your hostname.
+  networking.hostName = "nixos-laptop"; # Define your hostname.
   networking.networkmanager.enable = true;
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant. Can't use with networking.networkmanager
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -136,10 +135,8 @@
 
   #tmux
   programs.tmux = {
-    catppuccin = {
-      enable = true;
-    };
-    # plugins = [pkgs.tmuxPlugins.catppuccin];
+   #catppuccin.enable = true; 
+   plugins = [pkgs.tmuxPlugins.catppuccin];
   };
 
   # Guest agent
@@ -187,7 +184,7 @@
    kubernetes-helm
    kubectl
  # Other
-   gnomm3.gnome-tweaks
+   gnome3.gnome-tweaks
    python3
    pipenv
    keepassxc
