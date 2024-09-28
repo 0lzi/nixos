@@ -7,6 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+# https://github.com/catppuccin/nix - set up before using this import
        <catppuccin/modules/nixos>
       ./hardware-configuration.nix
     ];
@@ -135,7 +136,10 @@
 
   #tmux
   programs.tmux = {
-    plugins = [pkgs.tmuxPlugins.catppuccin];
+    catppuccin = {
+      enable = true;
+    };
+    # plugins = [pkgs.tmuxPlugins.catppuccin];
   };
 
   # Guest agent
@@ -183,6 +187,7 @@
    kubernetes-helm
    kubectl
  # Other
+   gnomm3.gnome-tweaks
    python3
    pipenv
    keepassxc
