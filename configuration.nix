@@ -13,7 +13,7 @@
 
  # Bootloader.
 # EFI Boot
-  boot.bootloader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
 # Manual install without EFI
@@ -24,7 +24,7 @@
 # Networking
   networking.hostName = "nixos-"; # Define your hostname.
   networking.networkmanager.enable = true;
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant. Can't use with networking.networkmanager
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
