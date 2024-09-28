@@ -11,13 +11,18 @@
       ./hardware-configuration.nix
     ];
 
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+ # Bootloader.
+# EFI Boot
+  boot.bootloader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+# Manual install without EFI
+  # boot.loader.grub.enable = true;
+  # boot.loader.grub.device = "/dev/sda";
+  # boot.loader.grub.useOSProber = true;
 
 # Networking
-  networking.hostName = "nixos-demo"; # Define your hostname.
+  networking.hostName = "nixos-"; # Define your hostname.
   networking.networkmanager.enable = true;
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
