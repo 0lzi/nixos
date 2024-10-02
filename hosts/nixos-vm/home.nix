@@ -2,7 +2,7 @@
 
 {
   imports = [
-   ./apps/tmux.nix
+   ../../apps/tmux.nix
   ];
 
   home.username = "oli";
