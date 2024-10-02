@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
        # <catppuccin/modules/nixos>
       ./hardware-configuration.nix
+      ../../apps/tmux.nix
     ];
 
 # Enable Nix Flakes
