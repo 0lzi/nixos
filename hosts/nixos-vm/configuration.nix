@@ -7,7 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-       <catppuccin/modules/nixos>
+       # <catppuccin/modules/nixos>
       ./hardware-configuration.nix
     ];
 
