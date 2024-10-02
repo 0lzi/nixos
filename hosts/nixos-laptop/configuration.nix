@@ -138,8 +138,8 @@
   };
 
   # Cattppuccin Theming
-  catppuccin.enable = true;
-  catppuccin.flavor = "mocha";
+  # catppuccin.enable = true;
+  # catppuccin.flavor = "mocha";
 
   #tmux
   programs.tmux = {
