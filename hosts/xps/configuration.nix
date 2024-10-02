@@ -57,6 +57,11 @@
     options = "--delete-older-than 30d";
 };
 
+# Automatic Updates                                                                                                                                                                           
+  system.autoUpgrade = {                                                                                                                                                                      
+    enable = true;                                                                                                                                                                            
+    allowReboot = true;                                                                                                                                                                       
+};
 # X11 + Desktop environments
 
   # Enable the X11 windowing system.
