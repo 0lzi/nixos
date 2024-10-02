@@ -11,7 +11,15 @@
       ./hardware-configuration.nix
     ];
 
- # Bootloader.
+# Enable Nix Flakes
+ nix = {
+  package = pkgs.nixFlakes;
+  extraOptions = ''
+    experimental-features = nix-command flakes
+  '';
+};
+
+# Bootloader.
 # EFI Boot
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
