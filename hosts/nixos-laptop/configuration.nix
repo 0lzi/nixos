@@ -201,6 +201,8 @@
    spotify
    nextcloud-client
    wireshark
+   discord
+   vesktop
   ];
 
   # Steam
