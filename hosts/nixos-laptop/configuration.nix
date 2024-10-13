@@ -33,6 +33,7 @@
   networking.hostName = "nixos-laptop"; # Define your hostname.
   networking.networkmanager.enable = true;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wg-quick.interfaces.wg0.configFile = "/etc/nixos/wireguard/wg0.conf";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -124,8 +125,8 @@
   };
 
   # Enable automatic login for the user.
-  services.xserver.displayManager.autoLogin.enable = true;
-  services.xserver.displayManager.autoLogin.user = "oli";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "oli";
 
 # Progams
 
@@ -193,7 +194,7 @@
    kubernetes-helm
    kubectl
  # Other
-   gnome3.gnome-tweaks
+   gnome-tweaks
    python3
    pipenv
    keepassxc
