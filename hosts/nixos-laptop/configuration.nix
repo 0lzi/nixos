@@ -167,6 +167,7 @@
    vim
    neovim
   # Terminal tools
+   dig
    tmux
    ipmitool
    ripgrep
@@ -219,7 +220,11 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+# Fonts
 
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "Hack" ]; })
+  ];
 # Virtualisation
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;

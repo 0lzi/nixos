@@ -13,5 +13,8 @@
     htop
     neofetch
     hugo
+    powerline-fonts
+    pipenv
   ];
+
 }
