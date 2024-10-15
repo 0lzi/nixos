@@ -3,6 +3,7 @@
 {
   imports = [
    ../../apps/tmux.nix
+   ../../apps/nvim.nix
   ];
 
   home.username = "oli";
@@ -16,5 +17,11 @@
     powerline-fonts
     pipenv
   ];
+  
+  home.file.".config/nvim" = {
+    source = "../../dotfiles/nvim";
+    recursive = true;
+  };
+
 
 }
