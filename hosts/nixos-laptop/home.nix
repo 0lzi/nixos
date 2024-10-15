@@ -19,8 +19,7 @@
   ];
   
   home.file.".config/nvim" = {
-    source = "../../dotfiles/nvim";
-    recursive = true;
+    source = config.lib.file.mkOutOfStoreSymlink ../../dotfiles/nvim;
   };
 
 
