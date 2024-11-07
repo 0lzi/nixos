@@ -19,7 +19,7 @@
     which
     gcc
     binutils
-
+    ansible-language-server
     # All the C libraries that a manylinux_1 wheel might depend on:
     ncurses
     xorg.libX11
