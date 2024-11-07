@@ -8,8 +8,8 @@ vim.opt.colorcolumn = "100"
 -- Listchars
 vim.opt.list = true
 vim.opt.listchars = {
-  nbsp = "␣",
-  tab = "→ ",
-  trail = "•",
-  eol = "↲",
+  nbsp = '␣',
+  tab = '→ ',
+  trail = '•',
+  eol = '↲',
 }
