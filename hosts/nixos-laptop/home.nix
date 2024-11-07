@@ -16,6 +16,18 @@
     hugo
     powerline-fonts
     pipenv
+    which
+    gcc
+    binutils
+
+    # All the C libraries that a manylinux_1 wheel might depend on:
+    ncurses
+    xorg.libX11
+    xorg.libXext
+    xorg.libXrender
+    xorg.libICE
+    xorg.libSM
+    glib
   ];
 
   home.file.".config/nvim" = {
