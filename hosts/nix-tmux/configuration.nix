@@ -30,7 +30,7 @@
   boot.loader.grub.useOSProber = true;
 
 # Networking
-  networking.hostName = "nixos-vm"; # Define your hostname.
+  networking.hostName = "nix-tmux"; # Define your hostname.
   networking.networkmanager.enable = true;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant. Can't use with networking.networkmanager
 
