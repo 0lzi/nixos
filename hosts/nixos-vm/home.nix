@@ -3,6 +3,7 @@
 {
   imports = [
    ../../apps/tmux.nix
+   ../../apps/nvim.nix
   ];
 
   home.username = "oli";
@@ -12,5 +13,25 @@
   home.packages = with pkgs; [
     htop
     neofetch
+    hugo
+    powerline-fonts
+    pipenv
+    which
+    gcc
+    binutils
+    ansible-language-server
+    # All the C libraries that a manylinux_1 wheel might depend on:
+    ncurses
+    xorg.libX11
+    xorg.libXext
+    xorg.libXrender
+    xorg.libICE
+    xorg.libSM
+    glib
   ];
+
+  home.file.".config/nvim" = {
+    source = config.lib.file.mkOutOfStoreSymlink ../../dotfiles/nvim;
+  };
+
 }
