@@ -28,6 +28,7 @@
     xorg.libICE
     xorg.libSM
     glib
+    gnupg
   ];
 
   home.file.".config/nvim" = {
