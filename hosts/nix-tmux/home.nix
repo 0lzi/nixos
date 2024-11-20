@@ -18,6 +18,7 @@
     pipenv
     which
     gcc
+    openldap
     binutils
     ansible-language-server
     # All the C libraries that a manylinux_1 wheel might depend on:
