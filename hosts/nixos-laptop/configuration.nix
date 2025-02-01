@@ -13,7 +13,6 @@
 
 # Enable Nix Flakes
  nix = {
-  package = pkgs.nixFlakes;
   extraOptions = ''
     experimental-features = nix-command flakes
   '';
@@ -224,7 +223,7 @@
 # Fonts
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "Hack" ]; })
+    nerd-fonts.hack
   ];
 # Virtualisation
   virtualisation.libvirtd.enable = true;
@@ -247,7 +246,7 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.11"; # Did you read the comment?
 
 }
 
