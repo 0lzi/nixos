@@ -29,6 +29,9 @@
     xorg.libSM
     glib
     gnupg
+    winbox4
+    direnv
+    nix-direnv
   ];
 
   home.file.".config/nvim" = {

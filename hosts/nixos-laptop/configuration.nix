@@ -206,6 +206,8 @@
    vesktop
   ];
 
+  services.fwupd.enable = true;
+
   # Steam
   programs.steam = {
     enable = true;
