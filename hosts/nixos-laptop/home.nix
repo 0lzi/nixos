@@ -32,6 +32,8 @@
     winbox4
     direnv
     nix-direnv
+    opentofu
+    terraform
   ];
 
   home.file.".config/nvim" = {
